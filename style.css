@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  
+
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+
+  
+   background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23000000' fill-opacity='0.29' fill-rule='evenodd'/%3E%3C/svg%3E");
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+    width: auto;
+    max-width: 900px;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+}
+.text{
+    font-size: 2.75rem;
+}
+.long-quote{
+  font-size: 1.75rem;
+} 
+.fa-quote-left{
+    font-size: 4rem;
+}
+.name{
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-style: italic;
+    font-weight: 400;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+.btn-side{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+button{
+ 
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  color: #fff;
+  height: 2.5rem;
+  cursor: pointer;
+  outline: none;
+  background: #333;
+  padding: .5rem 1.8rem;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+ 
+}
+ /* .tittle:hover:focus{
+  transition: 0.5ms;
+}  */
+button:hover{
+  filter: brightness(120%);
+}
+button:active{
+transform: translate(0, 0.3rem);
+box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+transition: 0.5ms;
+}
+.twitter:hover{
+  color: #38a1f3;
+ 
+}
+
+.fa-twitter{
+  
+  font-size: 1rem;
+}
+
+.load{
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #333;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+ 
+}
+@media (max-width: 900px) {
+    .container{
+        margin-top: auto 10px;
+        
+    }
+    .text{
+        font-size: 2.2rem;
+        
+    }
+}
